@@ -1,0 +1,189 @@
+@Echo Off
+REM Tasks disabler
+REM
+REM 
+Reg.exe add "HKCU\Changes" /v "Schedule.bat Changed" /t REG_SZ /d "08MAY24" /f
+REM
+REM
+SchTasks /Change /Disable /TN "AdobeGCInvoker-1.0"
+SchTasks /Change /Disable /TN "Adobe-Genuine-Software-Integrity-Scheduler-1.0"
+SchTasks /Change /Disable /TN "aquasuite service helper"
+SchTasks /Change /Disable /TN "iSCSIAgentAutoStartup" 
+SchTasks /Change /Disable /TN "StartAllBack Update" 
+REM
+SchTasks /Change /Disable /TN "MicrosoftEdgeUpdateTaskMachineCore{CFFEE2DA-B644-4111-8081-56C3368FDE46}"
+SchTasks /Change /Disable /TN "MicrosoftEdgeUpdateTaskMachineUA{83449551-E338-4A27-A0E6-B5868200F3C3}"
+REM
+SchTasks /Change /Disable /TN "Microsoft\Office\Office Automatic Updates 2.0"
+SchTasks /Change /Disable /TN "Microsoft\Office\Office ClickToRun Service Monitor"
+SchTasks /Change /Disable /TN "Microsoft\Office\Office Feature Updates Logon"
+SchTasks /Change /Disable /TN "Microsoft\Office\Office Feature Updates"
+SchTasks /Change /Disable /TN "Microsoft\Office\OfficeTelemetryAgentLogOn"
+SchTasks /Change /Disable /TN "Microsoft\Office\OfficeTelemetryAgentFallBack"
+SchTasks /Change /Disable /TN "Microsoft\OfficeOffice 15 Subscription Heartbeat"
+REM
+SchTasks /Change /Disable /TN "OneDrive Per-Machine Standalone Update Task"
+REM
+SchTasks /Change /Disable /TN "Microsoft\Windows\Active Directory Rights Management Services Client\AD RMS Rights Policy Template Management (Automatic)"
+SchTasks /Change /Disable /TN "Microsoft\Windows\Active Directory Rights Management Services Client\AD RMS Rights Policy Template Management (Manual)"
+REM
+SchTasks /Change /Disable /TN "Microsoft\Windows\AppID\SmartScreenSpecific" 
+Schtasks /Change /Disable /TN "\Microsoft\Windows\ApplicationData\AppUriVerifierDaily" 
+REM
+schtasks /Change /Disable /TN "Microsoft\Windows\Application Experience\AITagent"
+SchTasks /Change /Disable /TN "Microsoft\Windows\Application Experience\MareBackup"
+SchTasks /Change /Disable /TN "Microsoft\Windows\Application Experience\Microsoft Compatibility Appraiser Exp"
+SchTasks /Change /Disable /TN "Microsoft\Windows\Application Experience\Microsoft Compatibility Appraiser"
+SchTasks /Change /Disable /TN "Microsoft\Windows\Application Experience\PcaPatchDbTask"
+SchTasks /Change /Disable /TN "Microsoft\Windows\Application Experience\ProgramDataUpdater""
+SchTasks /Change /Disable /TN "Microsoft\Windows\Application Experience\SdbinstMergeDbTask"
+REM
+SchTasks /Change /Disable /TN "Microsoft\Windows\AppxDeploymentClient\Pre-staged app cleanup"
+schtasks /Change /Disable /TN "Microsoft\Windows\autochk\proxy"
+REM
+SchTasks /Change /Disable /TN "Microsoft\Windows\BitLocker\BitLocker Encrypt All Drives"
+SchTasks /Change /Disable /TN "Microsoft\Windows\BitLocker\BitLocker MDM policy Refresh"
+REM
+SchTasks /Change /Disable /TN "Microsoft\Windows\BrokerInfrastructure\BgTaskRegistrationMaintenanceTask"
+REM
+SchTasks /Change /Disable /TN "Microsoft\Windows\CloudExperienceHost\CreateObjectTask"
+SchTasks /Change /Disable /TN "Microsoft\Windows\CloudRestore\Backup"
+SchTasks /Change /Disable /TN "Microsoft\Windows\CloudRestore\Restore"
+REM
+SchTasks /Change /Disable /TN "Microsoft\Windows\Customer Experience Improvement Program\Consolidator"
+schtasks /Change /Disable /TN "Microsoft\Windows\Customer Experience Improvement Program\KernelCeipTask"
+schtasks /Change /Disable /TN "Microsoft\Windows\Customer Experience Improvement Program\UsbCeip"
+Reg.exe delete "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tasks\{7F16AD35-6951-4E8F-BEF0-D457C39B61D8}" /f
+schtasks /Change /Disable /TN "Microsoft\Windows\Customer Experience Improvement Program\Uploader"
+REM
+schtasks /Change /Disable /TN "Microsoft\Windows\Device information\Device"
+schtasks /Change /Disable /TN "Microsoft\Windows\Device information\Device User"
+REM
+SchTasks /Change /Disable /TN "Microsoft\Windows\DirectX\DirectXDatabaseUpdater"
+SchTasks /Change /Disable /TN "Microsoft\Windows\DirectX\DXGIAdapterCache"
+REM
+schtasks /Change /Disable /TN "Microsoft\Windows\DiskDiagnostic\Microsoft-Windows-DiskDiagnosticDataCollector"
+REM
+SchTasks /Change /Disable /TN "Microsoft\Windows\EDP\StorageCardEncryption Task"
+REM
+SchTasks /Change /Disable /TN "Microsoft\Windows\EnterpriseMgmt\MdmDiagnosticsCleanup"
+SchTasks /Change /Disable /TN "Microsoft\Windows\EnterpriseMgmt\MDMMaintenenceTask"
+REM
+SchTasks /Change /Disable /TN "Microsoft\Windows\ExploitGuard\ExploitGuard MDM policy Refresh"
+REM
+SchTasks /Change /Disable /TN "Microsoft\Windows\Flighting\FeatureConfig\UsageData\UsageDataFlushing"
+SchTasks /Change /Disable /TN "Microsoft\Windows\Flighting\FeatureConfig\UsageData\UsageDataReceiver"
+SchTasks /Change /Disable /TN "Microsoft\Windows\Flighting\FeatureConfig\UsageData\UsageDataReporting"
+REM
+SchTasks /Change /Disable /TN "Microsoft\Windows\Input\InputSettingsRestoreDataAvailable"
+SchTasks /Change /Disable /TN "Microsoft\Windows\Input\LocalUserSyncDataAvailable"
+SchTasks /Change /Disable /TN "Microsoft\Windows\Input\MouseSyncDataAvailable"
+SchTasks /Change /Disable /TN "Microsoft\Windows\Input\PenSyncDataAvailable"
+SchTasks /Change /Disable /TN "Microsoft\Windows\Input\syncpensettings"
+SchTasks /Change /Disable /TN "Microsoft\Windows\Input\TouchpadSyncDataAvailable"
+REM
+SchTasks /Change /Disable /TN "Microsoft\Windows\InstallService\WakeUpAndContinueUpdates"
+SchTasks /Change /Disable /TN "Microsoft\Windows\InstallService\WakeUpAndScanForUpdates"
+REM
+SchTasks /Change /Disable /TN "Microsoft\Windows\International\Synchronize Language Settings"
+SchTasks /Change /Disable /TN "Microsoft\Windows\Location\WindowsActionDialog"
+SchTasks /Change /Disable /TN "Microsoft\Windows\Maintenance\WinSAT"
+REM
+SchTasks /Change /Disable /TN "Microsoft\Windows\Management\Autopilot\DetectHardwareChange"
+SchTasks /Change /Disable /TN "Microsoft\Windows\Management\Autopilot\RemediateHardwareChange"
+REM
+SchTasks /Change /Disable /TN "Microsoft\Windows\Management\Provisioning\Cellular"
+SchTasks /Change /Disable /TN "Microsoft\Windows\Management\Provisioning\MdmDiagnosticsCleanup"
+REM
+SchTasks /Change /Disable /TN "Microsoft\Windows\Maps\MapsToastTask"
+SchTasks /Change /Disable /TN "Microsoft\Windows\Maps\MapsUpdateTask"
+REM
+schtasks /Delete /F /TN "Microsoft\Windows\Media Center\activateWindowssearch"
+schtasks /Delete /F /TN "Microsoft\Windows\Media Center\configureinternettimeservice"
+schtasks /Delete /F /TN "Microsoft\Windows\Media Center\dispatchrecoverytasks"
+schtasks /Delete /F /TN "Microsoft\Windows\Media Center\ehdrminit"
+schtasks /Delete /F /TN "Microsoft\Windows\Media Center\installplayready"
+schtasks /Delete /F /TN "Microsoft\Windows\Media Center\mcupdate"
+schtasks /Delete /F /TN "Microsoft\Windows\Media Center\mediacenterrecoverytask"
+schtasks /Delete /F /TN "Microsoft\Windows\Media Center\objectstorerecoverytask"
+schtasks /Delete /F /TN "Microsoft\Windows\Media Center\ocuractivate"
+schtasks /Delete /F /TN "Microsoft\Windows\Media Center\ocurdiscovery"
+schtasks /Delete /F /TN "Microsoft\Windows\Media Center\pbdadiscovery"
+schtasks /Delete /F /TN "Microsoft\Windows\Media Center\pbdadiscoveryw1"
+schtasks /Delete /F /TN "Microsoft\Windows\Media Center\pbdadiscoveryw2"
+schtasks /Delete /F /TN "Microsoft\Windows\Media Center\pvrrecoverytask"
+schtasks /Delete /F /TN "Microsoft\Windows\Media Center\pvrscheduletask"
+schtasks /Delete /F /TN "Microsoft\Windows\Media Center\registersearch"
+schtasks /Delete /F /TN "Microsoft\Windows\Media Center\reindexsearchroot"
+schtasks /Delete /F /TN "Microsoft\Windows\Media Center\sqlliterecoverytask"
+schtasks /Delete /F /TN "Microsoft\Windows\Media Center\updaterecordpath"
+REM
+schtasks /Delete /F /TN "Microsoft\Windows\MemoryDiagnostic\ProcessMemoryDiagnosticEvents"
+schtasks /Delete /F /TN "Microsoft\Windows\MemoryDiagnostic\RunFullMemoryDiagnostic"
+REM
+SchTasks /Change /Disable /TN "Microsoft\Windows\NetTrace\GatherNetworkInfo" 
+SchTasks /Change /Disable /TN "Microsoft\Windows\Network Controller\SDN Diagnostics Task"
+REM
+SchTasks /Change /Disable /TN "Microsoft\Windows\PI\Secure-Boot-Update"
+SchTasks /Change /Disable /TN "Microsoft\Windows\PI\SecureBootEncodeUEFI"
+schtasks /Change /Disable /TN "Microsoft\Windows\PI\Sqm-Tasks"
+REM
+SchTasks /Change /Disable /TN "Microsoft\Windows\Power Efficiency Diagnostics\AnalyzeSystem"
+REM
+SchTasks /Change /Disable /TN "Microsoft\Windows\PushToInstall\LoginCheck"
+SchTasks /Change /Disable /TN "Microsoft\Windows\PushToInstall\Registration"
+REM
+SchTasks /Change /Disable /TN "Microsoft\Windows\Ras\MobilityManager"
+SchTasks /Change /Disable /TN "Microsoft\Windows\ReFsDedupSvc\Initialization"
+SchTasks /Change /Disable /TN "Microsoft\Windows\SharedPC\Account Cleanup"
+REM
+SchTasks /Change /Disable /TN "Microsoft\Windows\Shell\FamilySafetyUpload"
+SchTasks /Change /Disable /TN "Microsoft\Windows\Shell\IndexerAutomaticMaintenance"
+SchTasks /Change /Disable /TN "Microsoft\Windows\Shell\UpdateUserPictureTask"
+REM
+SchTasks /Change /Disable /TN "Microsoft\Windows\Software Inventory Logging\Collection"
+SchTasks /Change /Disable /TN "Microsoft\Windows\Software Inventory Logging\Configuration"
+REM
+SchTasks /Change /Disable /TN "Microsoft\Windows\Speech"
+REM
+SchTasks /Change /Disable /TN "Microsoft\Windows\Time Synchronization\ForceSynchronizeTime"
+SchTasks /Change /Disable /TN "Microsoft\Windows\Time Synchronization\SynchronizeTime"
+SchTasks /Change /Disable /TN "Microsoft\Windows\Time Zone\SynchronizeTimeZone"
+REM
+SchTasks /Change /Disable /TN "Microsoft\Windows\TPM\Tpm-HASCertRetr"
+SchTasks /Change /Disable /TN "Microsoft\Windows\TPM\Tpm-Maintenance"
+SchTasks /Change /Disable /TN "Microsoft\Windows\TPM\Tpm-PreAttestationHealthCheck"
+REM
+SchTasks /Change /Disable /TN "Microsoft\Windows\UpdateOrchestrator\Report policies"
+SchTasks /Change /Disable /TN "Microsoft\Windows\UpdateOrchestrator\Schedule Maintenance Work"
+SchTasks /Change /Disable /TN "Microsoft\Windows\UpdateOrchestrator\Schedule Scan Static Task"
+SchTasks /Change /Disable /TN "Microsoft\Windows\UpdateOrchestrator\Schedule Scan"
+SchTasks /Change /Disable /TN "Microsoft\Windows\UpdateOrchestrator\Schedule Wake To Work"
+SchTasks /Change /Disable /TN "Microsoft\Windows\UpdateOrchestrator\Schedule Work"
+REM
+SchTasks /Change /Disable /TN "Microsoft\Windows\UpdateOrchestrator\USO_UxBroker"
+Reg.exe delete "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tasks\{7F065F5E-813C-413E-96C9-C63A0F8A5A62}" /f
+Reg.exe delete "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tree\Microsoft\Windows\UpdateOrchestrator\USO_UxBroker" /f
+REM
+REM
+SchTasks /Change /Disable /TN "Microsoft\Windows\User Profile Service\HiveUploadTask"
+REM
+schtasks /Change /Disable /TN "Microsoft\Windows\Windows Defender\Windows Defender Cache Maintenance" 
+schtasks /Change /Disable /TN "Microsoft\Windows\Windows Defender\Windows Defender Cleanup" 
+schtasks /Change /Disable /TN "Microsoft\Windows\Windows Defender\Windows Defender Scheduled Scan" 
+schtasks /Change /Disable /TN "Microsoft\Windows\Windows Defender\Windows Defender Verification" 
+REM
+schtasks /Change /Disable /TN "Microsoft\Windows\Windows Error Reporting\QueueReporting"
+REM
+SchTasks /Change /Disable /TN "Microsoft\Windows\WindowsUpdate\Scheduled Start"
+SchTasks /Change /Disable /TN "Microsoft\Windows\WindowsUpdate\Automatic App Update"
+REM
+SchTasks /Change /Disable /TN "Microsoft\Windows\WwanSvc\OobeDiscovery" 
+REM
+REM
+REM
+REM
+schtasks /Change /Disable /TN "Microsoft\Windows\.NET Framework\.NET Framework NGEN v4.0.30319"
+schtasks /Change /Disable /TN "Microsoft\Windows\.NET Framework\.NET Framework NGEN v4.0.30319 64"
+schtasks /Change /Disable /TN "Microsoft\Windows\.NET Framework\.NET Framework NGEN v4.0.30319 Critical"
+schtasks /Change /Disable /TN "Microsoft\Windows\.NET Framework\.NET Framework NGEN v4.0.30319 64 Critical"
